@@ -1,0 +1,463 @@
+/* 1. Bases del diseño */
+
+:root {
+  --MainBlue: #01eadd;
+  --MainBlack: #282e3c;
+  --SecondaryBlue: #E5FDF4;
+}
+
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--MainBlack);
+  margin: 0px;
+
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--MainBlack);
+
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--MainBlack);
+}
+
+h3 {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--MainBlue);
+  text-transform: uppercase;
+
+}
+
+P {
+  font-size: 1rem;
+  color: var(--MainBlack);
+  text-align: left;
+  margin: 0px;
+  line-height: 1.5rem;
+
+}
+
+body {
+  background-color: var(--MainBlack);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.gridStructure {
+  grid-column: 2/3;
+}
+
+button {
+  color: var(--MainBlack);
+  background-color: var(--MainBlue);
+  border-color: var(--MainBlue);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(1, 234, 221, 0.6);
+  font-weight: 500;
+}
+
+header, section, footer {
+  display: grid;
+  grid-template-columns: 1fr 1120px 1fr;
+}
+
+
+/* 2. Header  */
+
+
+
+
+header .gridStructure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: auto;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  list-style: none;
+  display: flex;
+}
+
+nav li a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+
+}
+
+
+nav li a:hover {
+  color: var(--MainBlue);
+}
+
+nav li a:visited {
+  color: white;
+}
+
+/* 3. Frase Principal */
+
+#mainPhrase{
+  display: grid;
+  grid-template-columns: 1fr 1120px 1fr;
+  background-color: var(--MainBlack);
+  margin-bottom: 2.5rem;
+}
+
+#mainPhrase .gridStructure {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  grid-template-rows: min-content min-content;
+  background-color: var(--MainBlack);
+}
+
+.micro {
+  max-height: 300px;
+}
+
+#mainPhrase h1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+
+#mainPhrase p {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  font-size: 1.1rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: white;
+  text-align: justify;
+
+}
+
+#mainPhrase img {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  justify-self: center;
+  align-self: center;
+}
+
+/* 4. Nuestros Principios */
+
+#nuestrosPrincipios {
+  background-color: white;
+}
+
+#nuestrosPrincipios .gridStructure {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+}
+
+#nuestrosPrincipios h2 {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  padding-top: 2rem;
+}
+
+.valuesStructure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.8rem;
+}
+
+.valuesStructure:nth-of-type(1) {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.valuesStructure:nth-of-type(2) {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.valuesStructure:nth-of-type(3) {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  margin-top: -3rem;
+}
+
+.valuesStructure:nth-of-type(4) {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  margin-top: -3rem;
+}
+
+#nuestrosPrincipios img {
+  height: 3.1rem;
+}
+
+#nuestrosPrincipios h3, #nuestrosPrincipios p {
+  text-align: center;
+}
+
+/* 5. Nuestra Inspiracion */
+
+
+#nuestraInspiracion{
+  background-color: var(--SecondaryBlue);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+
+#nuestraInspiracion .gridStructure{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+#nuestraInspiracion h2{
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+
+.inspiracionDescription {
+ text-align: center;
+ margin-bottom: 4rem;
+ grid-column: 1/3;
+ grid-row: 2/3;
+}
+
+#nuestraInspiracion iframe {
+ grid-column: 1/2;
+ grid-row: 3/4;
+}
+
+.inspiracionPhrase {
+  grid-column: 2/3;
+  grid-row:  3/4;
+  text-align: center;
+  font-style: italic;
+  margin: auto 3rem;
+}
+
+.inspiracionPhrase span {
+  font-weight: 700;
+  color: var(--MainBlue);
+
+}
+
+/* 6. Cómo lo aplicamos */
+
+#comoLoAplicamos {
+  background-color: white;
+  padding-top: 2rem;
+}
+
+#comoLoAplicamos .gridStructure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#comoLoAplicamos p{
+  text-align: center;
+}
+
+#comoLoAplicamos img{
+  width: 100%;
+}
+
+/* 7. Que no se interrumpa */
+
+#QueNoSeInterrumpa {
+  background-color: var(--SecondaryBlue);
+  padding-top: 2rem;
+}
+
+#QueNoSeInterrumpa .gridStructure {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+#QueNoSeInterrumpa h2 {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  margin-bottom: -3rem;
+}
+
+#QueNoSeInterrumpa img {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  height: 70%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#QueNoSeInterrumpa p {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin: auto 2rem;
+}
+
+/* 8. Lo quiero */
+
+#LoQuiero {
+  background-color: white;
+  padding-top: 2rem;
+}
+
+
+#LoQuiero .gridStructure{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#LoQuiero h2:nth-of-type(1) {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#LoQuiero h2:nth-of-type(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#LoQuiero button:nth-of-type(1) {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+#LoQuiero button:nth-of-type(2) {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Footer */
+
+Footer .gridStructure {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+Footer div div {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content:center;
+}
+
+Footer img {
+ max-width: 100px;
+ margin: 2rem;
+}
+
+Footer a {
+  color: white;
+  margin-top: 0.5em;
+  margin-top: 0.5em;
+  text-decoration: none;
+}
+
+Footer a:hover {
+  color: var(--MainBlue);
+}
+
+/* Partners */
+
+#partners {
+  background-color: white;
+  padding-bottom: 3rem;
+}
+
+#partners .gridStructure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#partners p {
+  text-align: center;
+  padding-bottom: 3em;
+}
+
+#partners img {
+  max-height: 80px;
+}
+
+#partners .gridStructure div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#partners img:nth-of-type(1) {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-bottom: 2rem;
+  margin-right: 1.5rem;
+}
+
+#partners img:nth-of-type(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-bottom: 2rem;
+  margin-left: 1.5rem;
+}
+
+#partners img:nth-of-type(3) {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  margin-right: 1.5rem;
+}
+
+#partners img:nth-of-type(4) {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin-left: 1.5rem;
+}
+
+/* Quienes somos */
+
+#QuienesSomos {
+  background-color: white;
+  padding-bottom: 3rem;
+}
+
+#QuienesSomos P {
+  text-align: center;
+}
